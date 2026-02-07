@@ -17,6 +17,13 @@
     "dir": "dist/server",
     "entry": "index.cjs"
   },
+  "permissions": {
+    "http": {
+      "domains": [
+        "*.hf.space"
+      ]
+    }
+  },
   "media": {
     "dir": "assets"
   },
@@ -37,5 +44,14 @@
   },
   "dev": {
     "subreddit": "askpesusubred_dev"
+  },
+  "settings": {
+    "global": {
+      "askPESUUrl": {
+        "type": "string",
+        "label": "AskPESU API URL",
+        "defaultValue": ""
+      }
+    }
   }
 }

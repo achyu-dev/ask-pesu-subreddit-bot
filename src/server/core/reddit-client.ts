@@ -1,4 +1,4 @@
-import { reddit } from '@devvit/web/server';
+import { reddit, settings } from '@devvit/web/server';
 
 export type AskPESUResponse = {
   status: boolean;
@@ -14,8 +14,8 @@ export type QuotaResponse = {
 
 export const queryAskPESU = async (title: string, content: string): Promise<AskPESUResponse> => {
   const query = `${title}\n\n${content || ''}`.trim();
-  const baseURL = process.env.ASK_PESU_URL;
-
+  const baseURL = await settings.get<string>('askPESUUrl');
+  console.log("ASK_PESU_URL =", baseURL);
   if (!baseURL) {
     console.error('ASK_PESU_URL environment variable not set');
     return { status: false };

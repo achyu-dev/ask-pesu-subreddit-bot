@@ -11,4 +11,4 @@ dist
 .env
 .git/
 .kiro/
-.cursor/*
+.cursor/
