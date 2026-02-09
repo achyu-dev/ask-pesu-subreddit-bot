@@ -20,7 +20,7 @@
   "permissions": {
     "http": {
       "domains": [
-        "*.hf.space"
+        "pesu-dev-askpesu.hf.space"
       ]
     }
   },
